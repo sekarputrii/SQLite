@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TableLayout</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="SUBMIT">SUBMIT</string>
+    <string name="LOGO">LOGO</string>
+</resources>
