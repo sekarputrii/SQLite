@@ -28,10 +28,28 @@ public class MainActivity extends AppCompatActivity {
                 Username = editTextTextPersonName.getText().toString();
                 Password = editTextTextPassword.getText().toString();
 
-                //Untuk menampilkan toast
-                Toast t = Toast.makeText(getApplicationContext(),
-                        "Email : "+ Username +"Password : "+ Password +"", Toast.LENGTH_LONG);
-                t.show();
+                if(Username.equals("sekarputri@gmail.com") && Password.equals("Sekar83"))
+                {
+                    Toast s = Toast.makeText(getApplicationContext(),
+                            "Success, \nUsername : "+ Username +"\nPassword : "+ Password, Toast.LENGTH_LONG);
+                    s.show();
+                }
+                else if(!Username.equals("sekarputri@gmail.com") && Password.equals("Sekar83"))
+                {
+                    Toast s = Toast.makeText(getApplicationContext(),
+                            "Login Failed (Wrong Username Entered)", Toast.LENGTH_LONG);
+                    s.show();
+                }
+                else if (Username.equals("sekarputri@gmail.com") && !Password.equals("Sekar83")) {
+                    Toast s = Toast.makeText(getApplicationContext(),
+                            "Login Failed (Wrong Password Entered)", Toast.LENGTH_LONG);
+                    s.show();
+                }
+                else{
+                    Toast s = Toast.makeText(getApplicationContext(),
+                            "Failed", Toast.LENGTH_LONG);
+                    s.show();
+                }
             }
         });
     }
