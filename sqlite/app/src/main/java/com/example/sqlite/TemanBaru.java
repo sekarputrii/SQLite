@@ -42,7 +42,7 @@ public class TemanBaru extends AppCompatActivity {
                     qvalues.put("Nama", nm);
                     qvalues.put("Telepon", tlp);
 
-                    controller.InsertData(qvalues);
+                    controller.insertData(qvalues);
                     callHome();
                 }
             }

@@ -18,16 +18,16 @@ public class DBController extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create Table Teman(id integer primary key, nama text, telepon text)");
+        db.execSQL("create table Teman(id integer primary key, Nama text, Telepon text)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("Drop Table if exists Teman");
+        db.execSQL("drop table if exists Teman");
         onCreate(db);
     }
 
-    public void InsertData(HashMap<String,String> QueryValues) {
+    public void insertData(HashMap<String,String> QueryValues) {
         SQLiteDatabase BasisData = this.getWritableDatabase();
         ContentValues Nilai = new ContentValues();
         Nilai.put("Nama", QueryValues.get("Nama"));

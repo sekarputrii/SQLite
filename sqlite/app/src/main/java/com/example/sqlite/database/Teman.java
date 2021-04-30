@@ -8,10 +8,10 @@ public class Teman {
     public Teman() {
     }
 
-    public Teman(String id, String nama, String telepon) {
+    public Teman(String id, String Nama, String Telepon) {
         this.id = id;
-        this.Nama = nama;
-        this.Telepon = telepon;
+        this.Nama = Nama;
+        this.Telepon = Telepon;
     }
 
     public String getId() {
@@ -26,15 +26,13 @@ public class Teman {
         return Nama;
     }
 
-    public void setNama(String nama) {
-        Nama = nama;
-    }
+    public void setNama(String nama) { Nama = Nama; }
 
     public String getTelepon() {
         return Telepon;
     }
 
     public void setTelepon(String telepon) {
-        Telepon = telepon;
+        Telepon = Telepon;
     }
 }

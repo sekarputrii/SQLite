@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 
 import com.example.sqlite.adapter.TemanAdapter;
 import com.example.sqlite.database.DBController;
@@ -19,7 +20,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private TemanAdapter adapter;
-    private ArrayList<Teman> temanArrayList;
+    private ArrayList<Teman>temanArrayList;
     DBController controller = new DBController(this);
     String id, nm, tlp;
     private FloatingActionButton fab;
@@ -29,23 +30,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       recyclerView = findViewById(R.id.recyclerView);
-       fab = findViewById(R.id.floatingBtn);
-       BacaData();
-       adapter = new TemanAdapter(temanArrayList);
-       RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
-       recyclerView.setLayoutManager(layoutManager);
-       recyclerView.setAdapter(adapter);
+        recyclerView = findViewById(R.id.recyclerView);
+        fab = findViewById(R.id.floatingBtn);
+        BacaData();
+        adapter = new TemanAdapter(temanArrayList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
 
-       fab.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent = new Intent(MainActivity.this, TemanBaru.class);
-               startActivity(intent);
-           }
-       });
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TemanBaru.class);
+                startActivity(intent);
+            }
+        });
     }
-
     public void BacaData() {
         ArrayList<HashMap<String, String>> DaftarTeman = controller.getAllTeman();
         temanArrayList = new ArrayList<>();
