@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kalimat"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Belajar Membaca Kalimat"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Nama saya Caca"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="nama"/>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Adik saya bernama Nana"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="adik"/>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Ibu menanak nasi"
+        android:layout_marginLeft="40dp"
+        android:onClick="ibu"/>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Ayah bekerja di kantor"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="-185dp"
+        android:onClick="ayah"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saya bahagia"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="20dp"
+        android:onClick="bahagia"/>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Riang Gembira"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="20dp"
+        android:onClick="riang"/>
+
+</LinearLayout>

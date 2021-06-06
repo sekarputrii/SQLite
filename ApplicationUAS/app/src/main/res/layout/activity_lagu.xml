@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lagu"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Lagu Anak-Anak"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Twinkle-twinkle Little Star"
+        android:layout_gravity="center"
+        android:onClick="twinklestar" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Baby Shark"
+        android:layout_gravity="center"
+        android:onClick="babyshark" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="ABC"
+        android:layout_gravity="center"
+        android:onClick="laguABC" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Dynosaurus ABC"
+        android:layout_gravity="center"
+        android:onClick="dynosaurus" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="30dp"
+        android:onClick="Pause"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_media_pause"
+        android:text="Pause" />
+
+</LinearLayout>

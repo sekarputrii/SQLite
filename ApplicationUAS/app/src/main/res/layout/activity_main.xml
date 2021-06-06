@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tampilan"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="344dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="AYO BELAJAR"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="Home"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/arrow_up_float"
+        android:text="Home"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="595dp" />
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="220dp"
+        android:onClick="Exit"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/arrow_down_float"
+        android:text="Exit"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="595dp" />
+
+</LinearLayout>

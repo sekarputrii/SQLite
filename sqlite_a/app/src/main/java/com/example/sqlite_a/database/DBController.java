@@ -27,24 +27,39 @@ public class DBController extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void insertData(HashMap<String, String> queryValues) {
+    public void insertData(HashMap<String,String> queryValues){
         SQLiteDatabase basisdata = this.getWritableDatabase();
-        ContentValues nilai = new ContentValues();
-        nilai.put("nama", queryValues.get("nama"));
+        ContentValues nilai =  new ContentValues();
+        nilai.put("nama",queryValues.get("nama"));
         nilai.put("telpon", queryValues.get("telpon"));
-        basisdata.insert("teman", null, nilai);
+        basisdata.insert("teman",null,nilai);
         basisdata.close();
     }
 
-    public ArrayList<HashMap<String, String>> getAllTeman() {
-        ArrayList<HashMap<String, String>> daftarTeman;
+    public void editData(HashMap<String, String> queryValues) {
+        SQLiteDatabase basisdata = this.getReadableDatabase();
+        ContentValues nilai = new ContentValues();
+        nilai.put("nama",queryValues.get("nama"));
+        nilai.put("telpon",queryValues.get("telpon"));
+        basisdata.update("teman",nilai,"id" +" =?", new String[]{queryValues.get("id")});
+        basisdata.close();
+    }
+
+    public void deleteData(HashMap<String,String> queryValues){
+        SQLiteDatabase basisdata = this.getReadableDatabase();
+        basisdata.delete("teman","id" + " =?", new String[]{queryValues.get("id")});
+        basisdata.close();
+    }
+
+    public ArrayList<HashMap<String,String>> getAllTeman(){
+        ArrayList<HashMap<String,String>> daftarTeman;
         daftarTeman = new ArrayList<HashMap<String, String>>();
         String selectQuery = "Select * from teman";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        if(cursor.moveToFirst()){
+        if (cursor.moveToFirst()){
             do {
-                HashMap<String, String> map = new HashMap<>();
+                HashMap<String,String> map = new HashMap<>();
                 map.put("id", cursor.getString(0));
                 map.put("nama", cursor.getString(1));
                 map.put("telpon", cursor.getString(2));

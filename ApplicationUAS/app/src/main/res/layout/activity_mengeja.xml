@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tampilan"
+    android:orientation="vertical"
+    tools:context=".Mengeja">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Ayo Mengeja"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/saya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="playsaya"
+        android:text="SA - YA" />
+
+    <Button
+        android:id="@+id/lama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="20dp"
+        android:onClick="playlama"
+        android:text="LA - MA" />
+
+    <Button
+        android:id="@+id/baca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:onClick="playbaca"
+        android:text="BA - CA" />
+
+    <Button
+        android:id="@+id/raga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-185dp"
+        android:onClick="playraga"
+        android:text="RA - GA" />
+
+    <Button
+        android:id="@+id/rasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="20dp"
+        android:onClick="playrasa"
+        android:text="RA - SA" />
+
+    <Button
+        android:id="@+id/jawa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="20dp"
+        android:onClick="playjawa"
+        android:text="JA - WA" />
+
+</LinearLayout>
